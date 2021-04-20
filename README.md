@@ -42,16 +42,18 @@ Process finished with exit code 0
 ### bench
 ```shell
 running 12 tests
-test bench05::test_ipdb    ... bench:       1,046 ns/iter (+/- 118)
-test bench05::test_ipdb_rs ... bench:       1,134 ns/iter (+/- 34)
-test bench10::test_ipdb    ... bench:         527 ns/iter (+/- 16)
-test bench10::test_ipdb_rs ... bench:       1,130 ns/iter (+/- 66)
-test bench20::test_ipdb    ... bench:         529 ns/iter (+/- 18)
-test bench20::test_ipdb_rs ... bench:       1,130 ns/iter (+/- 58)
-test bench40::test_ipdb    ... bench:         527 ns/iter (+/- 52)
-test bench40::test_ipdb_rs ... bench:       1,129 ns/iter (+/- 37)
-test bench60::test_ipdb    ... bench:         528 ns/iter (+/- 17)
-test bench60::test_ipdb_rs ... bench:       1,133 ns/iter (+/- 74)
-test bench80::test_ipdb    ... bench:         527 ns/iter (+/- 21)
-test bench80::test_ipdb_rs ... bench:       1,128 ns/iter (+/- 49)
+test bench0500::test_ipdb    ... bench:     261,625 ns/iter (+/- 13,556)
+test bench0500::test_ipdb_rs ... bench:     318,980 ns/iter (+/- 9,253)
+test bench1000::test_ipdb    ... bench:     522,450 ns/iter (+/- 9,787)
+test bench1000::test_ipdb_rs ... bench:     635,570 ns/iter (+/- 17,337)
+test bench2000::test_ipdb    ... bench:   1,048,630 ns/iter (+/- 71,659)
+test bench2000::test_ipdb_rs ... bench:   1,273,910 ns/iter (+/- 43,754)
+test bench4000::test_ipdb    ... bench:   2,096,190 ns/iter (+/- 33,412)
+test bench4000::test_ipdb_rs ... bench:   2,554,980 ns/iter (+/- 36,575)
+test bench6000::test_ipdb    ... bench:   3,140,700 ns/iter (+/- 52,065)
+test bench6000::test_ipdb_rs ... bench:   3,837,500 ns/iter (+/- 49,432)
+test bench8000::test_ipdb    ... bench:   4,191,190 ns/iter (+/- 49,141)
+test bench8000::test_ipdb_rs ... bench:   5,121,350 ns/iter (+/- 47,059)
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 12 measured; 0 filtered out; finished in 7.99s
 ```
