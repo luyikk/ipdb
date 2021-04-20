@@ -50,8 +50,8 @@ impl<'a> From<Vec<&'a str>> for  CityInfo<'a>{
     }
 }
 
-// impl<'a> ToString for CityInfo<'a>{
-//     fn to_string(&self) -> String {
-//         format!("{:?}",self)
-//     }
-// }
+impl<'a> ToString for CityInfo<'a>{
+    fn to_string(&self) -> String {
+        format!("{:?}",self)
+    }
+}
