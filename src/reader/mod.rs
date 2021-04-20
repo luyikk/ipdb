@@ -146,15 +146,14 @@ impl Reader{
     }
 
     #[inline]
-    pub fn find_map(&self,addr:&str,language:&str)->Result<BTreeMap<String,&str>>{
+    pub fn find_map(&self,addr:&str,language:&str)->Result<BTreeMap<&str,&str>>{
         let v=self.find(addr,language)?;
-        let mut k=self.meta.fields.clone();
-        let mut map=BTreeMap::new();
+        let k=&self.meta.fields;
+        let mut map:BTreeMap<&str,&str>=BTreeMap::new();
         for i in 0..v.len() {
-            ensure!(k.len()>0,"keys len too small");
             let value=v[i];
-            let key=k.remove(0);
-            map.insert(key,value);
+            let key=k.get(i).ok_or_else(||anyhow!("keys len too small"))?;
+            map.insert(key.as_str(),value);
         }
         Ok(map)
     }

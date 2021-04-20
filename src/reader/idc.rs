@@ -1,5 +1,5 @@
-
-#[derive(Debug)]
+use serde::Serialize;
+#[derive(Debug, Serialize)]
 pub struct  IdcInfo<'a>{
     pub country_name:&'a str,
     pub region_name:&'a str,

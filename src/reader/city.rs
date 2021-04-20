@@ -1,5 +1,5 @@
-
-#[derive(Debug)]
+use serde::Serialize;
+#[derive(Debug, Serialize)]
 pub struct  CityInfo<'a>{
     pub country_name:&'a str,
     pub region_name:&'a str,
@@ -50,8 +50,8 @@ impl<'a> From<Vec<&'a str>> for  CityInfo<'a>{
     }
 }
 
-impl<'a> ToString for CityInfo<'a>{
-    fn to_string(&self) -> String {
-        format!("{:?}",self)
-    }
-}
+// impl<'a> ToString for CityInfo<'a>{
+//     fn to_string(&self) -> String {
+//         format!("{:?}",self)
+//     }
+// }
