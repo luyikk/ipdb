@@ -8,12 +8,13 @@ pub use meta::Meta;
 pub use city::CityInfo;
 pub use district::DistrictInfo;
 pub use idc::IdcInfo;
+pub use base_station::BaseStationInfo;
 use anyhow::*;
 use std::path::Path;
 use std::convert::TryInto;
 use std::net::{IpAddr};
 use std::str::FromStr;
-use crate::reader::base_station::BaseStationInfo;
+
 
 
 pub struct Reader{
