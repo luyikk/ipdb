@@ -14,7 +14,7 @@ use std::path::Path;
 use std::convert::TryInto;
 use std::net::{IpAddr};
 use std::str::FromStr;
-
+use std::collections::BTreeMap;
 
 
 pub struct Reader{
@@ -143,5 +143,19 @@ impl Reader{
     #[inline]
     pub fn find_base_station_info(&self,addr:&str,language:&str)->Result<BaseStationInfo>{
         Ok(self.find(addr,language)?.into())
+    }
+
+    #[inline]
+    pub fn find_map(&self,addr:&str,language:&str)->Result<BTreeMap<String,&str>>{
+        let v=self.find(addr,language)?;
+        let mut k=self.meta.fields.clone();
+        let mut map=BTreeMap::new();
+        for i in 0..v.len() {
+            ensure!(k.len()>0,"keys len too small");
+            let value=v[i];
+            let key=k.remove(0);
+            map.insert(key,value);
+        }
+        Ok(map)
     }
 }

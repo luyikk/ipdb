@@ -19,5 +19,7 @@ fn main()->Result<()> {
     println!("{:?}",r);
     let r= IPDB.find_base_station_info("199.193.127.3","CN")?;
     println!("{:?}",r);
+    let r= IPDB.find_map("199.193.127.3","CN")?;
+    println!("{:?}",r);
     Ok(())
 }
